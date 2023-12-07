@@ -1,0 +1,49 @@
+@import "../../global.scss";
+
+.latest-offenders {
+  .big-head {
+    font-size: 1.5rem !important;
+  }
+  .list {
+    margin-top: 1rem;
+
+    .list-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+
+      .user {
+        display: flex;
+        gap: 1rem;
+
+        img {
+          width: 2rem;
+          height: 2rem;
+          border-radius: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .userTexts {
+          display: flex;
+          flex-direction: column;
+          gap: 0.25rem;
+
+          .username {
+            @include regular-text();
+            font-weight: 700;
+            color: $main-color;
+          }
+          .email {
+            @include small-text();
+            color: $theme-color;
+          }
+        }
+      }
+      .amount {
+        font-weight: 700;
+      }
+    }
+  }
+}

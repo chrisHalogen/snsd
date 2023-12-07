@@ -1,0 +1,46 @@
+@import "../../global.scss";
+
+.dashboard {
+  width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  display: grid;
+  gap: 20px;
+
+  overflow: hidden;
+
+  // Another way to write 1fr 1fr 1fr 1fr
+  grid-template-columns: repeat(4, 1fr);
+
+  // Minimum Width = 180px
+  // Maximum Width = auto
+  grid-auto-rows: minmax(180px, auto);
+
+  // Close any Spaces Above the current element
+  grid-auto-flow: dense;
+
+  .box {
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid $dark-bg;
+
+    &.box1 {
+      grid-column: span 1;
+      grid-row: span 3;
+    }
+
+    &.box4 {
+      grid-column: span 1;
+      grid-row: span 2;
+    }
+    &.box7 {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+}
